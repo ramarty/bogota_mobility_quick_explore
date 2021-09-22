@@ -14,19 +14,6 @@ system("java -version")
 #### Start Session
 sc <- spark_connect(master = "local")
 
-#### Load Data: Initial
-if(F){
-  s_df_tmp <- spark_read_parquet(sc,
-                                 "test", 
-                                 file.path(cuebiq_dir, "RawData", "data",
-                                           "country=CO", "date=2020-04-01"),
-                                 memory = F)
-  
-  #### Columns and Types
-  df <- s_df_tmp %>% head() %>% as.data.frame()
-  spec_with_r <- sapply(df, class)
-}
-
 # Load Main Data ---------------------------------------------------------------
 s_df <- spark_read_parquet(sc,
                            "test", 

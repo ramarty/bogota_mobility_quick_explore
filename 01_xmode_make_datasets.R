@@ -12,18 +12,6 @@ system("java -version")
 #### Start Session
 sc <- spark_connect(master = "local")
 
-#### Example Data
-if(F){
-  s_tmp_df <- spark_read_parquet(sc,
-                                 "test", 
-                                 file.path(xmode_dir, "RawData", "data",
-                                           "final_country=CO",
-                                           "location_dt=2021-01-01"),
-                                 memory = F) %>%
-    head() %>%
-    as.data.frame()
-}
-
 # Load Main Data ---------------------------------------------------------------
 # Boundaries of Bogota
 lat_min <- 4.458683
