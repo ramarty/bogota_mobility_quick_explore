@@ -49,8 +49,8 @@ library(labelled)
 # Code -------------------------------------------------------------------------
 if(RUN_CODE){
   
-  # Create aggregated datasets (eg, data aggegrated to daily leve)
-  # xmode code takes a few hours to run
+  # Create aggregated datasets (eg, data aggegrated to daily level)
+  # NOTE: xmode code takes a few hours to run
   source(file.path(git_dir, "01_cuebiq_make_datasets.R"))
   source(file.path(git_dir, "01_xmode_make_datasets.R"))
   
