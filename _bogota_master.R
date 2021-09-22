@@ -46,6 +46,16 @@ library(scales)
 library(haven)
 library(labelled)
 
+# Set JAVA to version 8 --------------------------------------------------------
+# Needed for spark to work
+
+# https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
+# /usr/libexec/java_home -V
+Sys.setenv(JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home")
+system("java -version")
+# spark_install()
+# spark_web(sc)
+
 # Code -------------------------------------------------------------------------
 if(RUN_CODE){
   

@@ -1,13 +1,6 @@
 # Density Along Road in North
 
 # Setup ------------------------------------------------------------------------
-#### Set JAVA to version 8
-# https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
-# /usr/libexec/java_home -V
-Sys.setenv(JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home")
-system("java -version")
-# spark_install()
-# spark_web(sc)
 
 #### Start Session
 sc <- spark_connect(master = "local")
